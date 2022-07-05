@@ -4,9 +4,9 @@ import java.util.LinkedList;
 public class QuanliSanPham {
     LinkedList<SanPham> SP = new LinkedList<>();
 
-    public void addSP(SanPham sp){
+    public void addSP(SanPham sp) {
         int count = 0;
-        if(sp != null) {
+        if (sp != null) {
 
             for (int i = 0; i < SP.size(); i++) {
 
@@ -15,26 +15,29 @@ public class QuanliSanPham {
                     SP.get(i).setSoLuong(k);
                     count++;
                 }
+
             }
-            if (count != 0) {
+            if (count == 0) {
                 SP.add(sp);
             }
         }
     }
 
-    public void removeSP(SanPham sp){
-        if(sp != null) {
-            for (int i = 0; i < SP.size(); i++) {
+    public void removeSP(String tenSP, int SL) {
+        for (int i = 0; i < SP.size(); i++) {
 
-                if (SP.get(i).getTenSP() == sp.getTenSP()) {
-                    int k = SP.get(i).getSoLuong() - 1;
+            if (SP.get(i).getTenSP() == tenSP) {
+                if (SP.get(i).getSoLuong() < SL) {
+                    SP.get(i).setSoLuong(0);
+                } else {
+                    int k = SP.get(i).getSoLuong() - SL;
                     SP.get(i).setSoLuong(k);
-
+                ;
                 }
+
             }
         }
     }
-
 
     public void updateSP(SanPham sp){
         int count = 0;

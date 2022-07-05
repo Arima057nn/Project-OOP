@@ -12,6 +12,9 @@ public class SanPham {
         this.giaBan = giaBan;
         this.soLuong = soLuong;
     }
+    public SanPham(String tenSP){
+        this.tenSP = tenSP;
+    }
 
     public String getTenSP() {
         return tenSP;

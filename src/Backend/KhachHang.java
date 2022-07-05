@@ -2,12 +2,17 @@ package Backend;
 
 public class KhachHang {
     private String tenKH, SDT;
-    private int TichDiem;
+    private int TichDiem = 0;
 
     public KhachHang(String tenKH, String SDT, int TichDiem) {
         this.tenKH = tenKH;
         this.SDT = SDT;
         this.TichDiem = TichDiem;
+    }
+    public KhachHang(String tenKH, String SDT) {
+        this.tenKH = tenKH;
+        this.SDT = SDT;
+
     }
 
     public int getTichDiem() {
@@ -32,6 +37,13 @@ public class KhachHang {
 
     public void setSDT(String SDT) {
         this.SDT = SDT;
+    }
+
+    public void display(){
+        System.out.println("TenKH: " + getTenKH());
+        System.out.println("SDT: " + getSDT());
+        System.out.println("Diem: " + getTichDiem());
+
     }
 }
 
