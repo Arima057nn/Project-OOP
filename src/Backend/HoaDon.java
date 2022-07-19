@@ -1,84 +1,82 @@
 package Backend;
-import java.time.LocalDate;
-import java.time.LocalTime;
 
+import java.util.ArrayList;
+import java.util.List;
 
 public class HoaDon {
-    private String maHD;
-    private String SDT;
-    private String sanpham;
-    private int soluong;
-    private LocalDate ngayLap;
-    private LocalTime gioLap;
-    private float TongTien = 0;
-    public HoaDon(){
-        ngayLap = LocalDate.now();
-        gioLap = LocalTime.now();
+
+    private List<SanPhamVaSoLuong> sanPhamVaSoLuongs = new ArrayList<SanPhamVaSoLuong>();
+    private String nam;
+    private String thang;
+    private String ngay;
+    private Double tongTien;
+    private Double tienKhachTra;
+    private Double tienTraLai;
+
+    public HoaDon(List<SanPhamVaSoLuong> sanPhamVaSoLuongs, String nam,
+                  String thang, String ngay, Double tongTien, Double tienKhachTra, Double tienTraLai) {
+        this.sanPhamVaSoLuongs = sanPhamVaSoLuongs;
+        this.nam = nam;
+        this.thang = thang;
+        this.ngay = ngay;
+        this.tongTien = tongTien;
+        this.tienKhachTra = tienKhachTra;
+        this.tienTraLai = tienTraLai;
     }
 
-    public HoaDon(String maHD, String SDT, String sanpham, int soluong, LocalDate ngayLap, LocalTime gioLap, float tongTien) {
-        this.maHD = maHD;
-        this.SDT = SDT;
-        this.sanpham = sanpham;
-        this.soluong = soluong;
-        this.ngayLap = ngayLap;
-        this.gioLap = gioLap;
-        TongTien = tongTien;
+    public List<SanPhamVaSoLuong> getSanPhamVaSoLuongs() {
+        return sanPhamVaSoLuongs;
     }
 
-    public String getMaHD() {
-        return maHD;
+    public void setSanPhamVaSoLuongs(List<SanPhamVaSoLuong> sanPhamVaSoLuongs) {
+        this.sanPhamVaSoLuongs = sanPhamVaSoLuongs;
     }
 
-    public void setMaHD(String maHD) {
-        this.maHD = maHD;
+    public String getNam() {
+        return nam;
     }
 
-    public String getSDT() {
-        return SDT;
+    public void setNam(String nam) {
+        this.nam = nam;
     }
 
-    public void setSDT(String SDT) {
-        this.SDT = SDT;
+    public String getThang() {
+        return thang;
     }
 
-    public String getSanpham() {
-        return sanpham;
+    public void setThang(String thang) {
+        this.thang = thang;
     }
 
-    public void setSanpham(String sanpham) {
-        this.sanpham = sanpham;
+    public String getNgay() {
+        return ngay;
     }
 
-    public int getSoluong() {
-        return soluong;
+    public void setNgay(String ngay) {
+        this.ngay = ngay;
     }
 
-    public void setSoluong(int soluong) {
-        this.soluong = soluong;
+    public Double getTongTien() {
+        return tongTien;
     }
 
-    public LocalDate getNgayLap() {
-        return ngayLap;
+    public void setTongTien(Double tongTien) {
+        this.tongTien = tongTien;
     }
 
-    public void setNgayLap(LocalDate ngayLap) {
-        this.ngayLap = ngayLap;
+    public Double getTienKhachTra() {
+        return tienKhachTra;
     }
 
-    public LocalTime getGioLap() {
-        return gioLap;
+    public void setTienKhachTra(Double tienKhachTra) {
+        this.tienKhachTra = tienKhachTra;
     }
 
-    public void setGioLap(LocalTime gioLap) {
-        this.gioLap = gioLap;
+    public Double getTienTraLai() {
+        return tienTraLai;
     }
 
-    public float getTongTien() {
-        return TongTien;
-    }
-
-    public void setTongTien(float tongTien) {
-        TongTien = tongTien;
+    public void setTienTraLai(Double tienTraLai) {
+        this.tienTraLai = tienTraLai;
     }
 }

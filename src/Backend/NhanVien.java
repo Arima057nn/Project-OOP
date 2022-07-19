@@ -1,20 +1,12 @@
 package Backend;
 
 public class NhanVien {
-    private String tenNV, SDT;
-    private int luong;
+    private String tenNV, sđt;
+    private Integer luong;
 
-    public NhanVien(String tenNV, String SDT, int luong) {
+    public NhanVien(String tenNV, String sđt, Integer luong) {
         this.tenNV = tenNV;
-        this.SDT = SDT;
-        this.luong = luong;
-    }
-
-    public int getLuong() {
-        return luong;
-    }
-
-    public void setLuong(int luong) {
+        this.sđt = sđt;
         this.luong = luong;
     }
 
@@ -26,18 +18,19 @@ public class NhanVien {
         this.tenNV = tenNV;
     }
 
-    public String getSDT() {
-        return SDT;
+    public String getSđt() {
+        return sđt;
     }
 
-    public void setSDT(String SDT) {
-        this.SDT = SDT;
-    }
-    public void display(){
-        System.out.println("TenNV: " + getTenNV());
-        System.out.println("SDT: " + getSDT());
-        System.out.println("Luong: " + getLuong());
-
+    public void setSđt(String sđt) {
+        this.sđt = sđt;
     }
 
+    public Integer getLuong() {
+        return luong;
+    }
+
+    public void setLuong(Integer luong) {
+        this.luong = luong;
+    }
 }

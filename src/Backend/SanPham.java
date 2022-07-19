@@ -2,18 +2,28 @@ package Backend;
 
 public class SanPham {
     private String tenSP;
-    private double giaNhap;
-    private double giaBan;
-    private int soLuong;
+    private Double giaNhap;
+    private Double giaBan;
+    private Integer soLuong;
+    private String size;
+    private String mauSac;
+    private String chatLieu;
+    private String xuatXu;
 
-    public SanPham(String tenSP, double giaNhap, double giaBan, int soLuong) {
+    public SanPham(){
+        this.giaBan = 0.0;
+        this.giaNhap = 0.0;
+    }
+
+    public SanPham(String tenSP, Double giaNhap, Double giaBan, Integer soLuong, String size, String mauSac, String chatLieu, String xuatXu) {
         this.tenSP = tenSP;
         this.giaNhap = giaNhap;
         this.giaBan = giaBan;
         this.soLuong = soLuong;
-    }
-    public SanPham(String tenSP){
-        this.tenSP = tenSP;
+        this.size = size;
+        this.mauSac = mauSac;
+        this.chatLieu = chatLieu;
+        this.xuatXu = xuatXu;
     }
 
     public String getTenSP() {
@@ -24,38 +34,59 @@ public class SanPham {
         this.tenSP = tenSP;
     }
 
-    public double getGiaNhap() {
+    public Double getGiaNhap() {
         return giaNhap;
     }
 
-    public void setGiaNhap(double giaNhap) {
+    public void setGiaNhap(Double giaNhap) {
         this.giaNhap = giaNhap;
     }
 
-    public double getGiaBan() {
+    public Double getGiaBan() {
         return giaBan;
     }
 
-    public void setGiaBan(double giaBan) {
+    public void setGiaBan(Double giaBan) {
         this.giaBan = giaBan;
     }
 
-    public int getSoLuong() {
+    public Integer getSoLuong() {
         return soLuong;
     }
 
-    public void setSoLuong(int soLuong) {
+    public void setSoLuong(Integer soLuong) {
         this.soLuong = soLuong;
     }
 
-    public void showSP(){
-        System.out.println("Ten: " + tenSP+"\n");
+    public String getSize() {
+        return size;
     }
 
-    public void display(){
-        System.out.println("TenSP: " + getTenSP());
-        System.out.println("Gia nhap: " + getGiaNhap());
-        System.out.println("Gia ban: " + getGiaBan());
-        System.out.println("So luong: " + getSoLuong());
+    public void setSize(String size) {
+        this.size = size;
+    }
+
+    public String getMauSac() {
+        return mauSac;
+    }
+
+    public void setMauSac(String mauSac) {
+        this.mauSac = mauSac;
+    }
+
+    public String getChatLieu() {
+        return chatLieu;
+    }
+
+    public void setChatLieu(String chatLieu) {
+        this.chatLieu = chatLieu;
+    }
+
+    public String getXuatXu() {
+        return xuatXu;
+    }
+
+    public void setXuatXu(String xuatXu) {
+        this.xuatXu = xuatXu;
     }
 }
